@@ -1,0 +1,18 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script>
+// http://stackoverflow.com/questions/764427/how-to-capture-enter-key-being-pressed-on-pages-containing-multiple-forms
+function onload() {
+	$( window ).bind('keypress', function(e) {
+	 	if (e.keyCode==32) {
+	         $("form").submit();
+		}
+	}
+}
+ </script>
+</head>
+<body onload="onload();">
+</body>
+</html>

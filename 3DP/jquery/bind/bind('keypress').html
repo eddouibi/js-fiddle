@@ -1,0 +1,13 @@
+<html>ss
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<body>
+	<div>John</div>
+	<div>test</div><div>test2</div>
+	<script>
+		$("div:contains('John')").css("text-decoration", "underline");
+		$("div:contains('test')").next().css("text-decoration", "underline");
+	</script>
+</body>
+</html>

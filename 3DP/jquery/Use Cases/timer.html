@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+var start = new Date;
+setInterval(function() {
+    $('#timer').text((new Date - start) / 1000 + " Seconds");
+}, 1000);
+    
+});
+</script>
+</head>
+<body>
+    <div id="timer">countdown_text</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $("#form").submit(function() {
+        $("#txt1").val("123456");
+
+        $("#form").validate({
+            rules: {
+                    t: {
+                            maxlength: 2
+                    }
+            }
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+    <form id="form">
+        <input type="text" id="txt1" name="txt1" />
+        <input type="submit" value="submit" />
+    </form>
+
+</body>
+</html>

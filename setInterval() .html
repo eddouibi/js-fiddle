@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script>
+    var systemlog = function() {
+            $.ajax({
+          url: "ajax.py",
+          dataType: "html"
+        }).done(function(data) {
+          $("#systemlog").html(data);
+        })
+    }
+    
+    setInterval(systemlog,1000);
+
+    setInterval(function() {
+        alert("setInterval");
+    }, 1000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

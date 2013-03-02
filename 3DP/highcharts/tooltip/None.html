@@ -1,0 +1,59 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js
+"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column'
+            },
+            title: {
+                text: 'Monthly Average Rainfall'
+            },
+            xAxis: {
+                type: 'datetime'
+            },
+            yAxis: {
+                title: {
+                    text: 'Rainfall (mm)'
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return false;
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                backgroundColor: '#FFFFFF',
+                align: 'left',
+                verticalAlign: 'top'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 1
+                }
+            },
+                series: [{
+                data: [
+                    Date.UTC(2012,11,11,10,0),
+                    Date.UTC(2012,11,11,11,0),
+                    Date.UTC(2012,11,11,12,0)
+                ]
+            }]
+        });
+    });
+});
+</script>
+</head>
+<body>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<a href="http://stackoverflow.com/questions/8785886/disable-tooltip-on-certain-points-in-highcharts">http://stackoverflow.com/questions/8785886/disable-tooltip-on-certain-points-in-highcharts</a>
+</body>
+</html>

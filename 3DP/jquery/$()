@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+
+function log(m) {
+    console.log(m)
+}
+var $ = require('jquery');
+var html = '<table>\n\
+    <tr><td>td1</td></tr>\n\
+    <tr><td>td2</td></tr>\n\
+    <tr><td>td3</td></tr>\n\
+</table>'
+log($("table td", html));
+log($("table td", html));

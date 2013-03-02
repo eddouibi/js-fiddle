@@ -1,0 +1,13 @@
+<html>
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+  $.getJSON("https://api.github.com/users/cancerhermit/repos?per_page=100&callback=?", function(data){
+    $("#result").html(JSON.stringify(data));
+  });
+</script>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+</html>

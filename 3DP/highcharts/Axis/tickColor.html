@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js
+"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'line'
+            },
+            title: { text: 'tickColor default #C0D0E0' },
+            series: [{
+                name:"series1",
+                data: [1,2,3,4,5,6]
+            },
+            {
+                name:"series2",
+                data: [6,5,4,3,2,1]
+            }]
+        });
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container2',
+                type: 'line'
+            },
+            title: { text: 'tickColor red' },
+            xAxis: {
+                tickColor:'red'
+            },
+            series: [{
+                name:"series1",
+                data: [1,2,3,4,5,6]
+            },
+            {
+                name:"series2",
+                data: [6,5,4,3,2,1]
+            }]
+        });
+    });//$(document).ready(function() {
+});
+</script>
+<style>
+div.container {
+    width:300px;
+    height:200px;
+}
+div.center {
+    text-align:center;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><div class="container" id="container"></div></td>
+            <td><div class="container" id="container2"></div></td>
+        </tr>
+    </table>
+</body>
+</html>

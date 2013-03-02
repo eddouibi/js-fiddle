@@ -1,0 +1,10 @@
+var d = new Date();
+debug(d.getFullYear())
+debug(d.getMonth())
+debug(d.getDate())
+debug(d.getDay())
+debug("getHours" + d.getHours())
+debug("getUTCHours" + d.getUTCHours())
+debug(d.getMinutes())
+debug(d.getSeconds())
+debug(d.getTime())

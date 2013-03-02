@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js
+"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column'
+            },
+            series: [{
+                name:"series name",
+                data: [1,2,3,4,3,2,1]
+            }]
+        });
+    });
+});
+</script>
+<style>
+div.container {
+    width:300px;
+    height:200px;
+}
+div.center {
+    text-align:center;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><div class="container" id="container"></div></td>
+        </tr>
+    </table>
+    <div class="center">
+        <a href="http://www.highcharts.com/demo/column">http://www.highcharts.com/demo/column</a>
+    <div>
+</body>
+</html>

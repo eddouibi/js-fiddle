@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+//http://api.jquery.com/html/
+
+var $ = require('jquery');
+var html = '<body><div> \
+innerhtml \
+</div></body>'
+console.log($("div", html).html());
+el=$("div", html).html("new");
+console.log(el.html());

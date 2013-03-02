@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.pjax.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('a').pjax('#container',{
+      timeout: 0
+        });
+    });
+    </script>
+</head>
+<body>
+  <h1>My Site</h1>
+  <div class="container" id="container">
+    Go to <a href="page.html">next page</a>.
+  </div>
+</body>
+</html>

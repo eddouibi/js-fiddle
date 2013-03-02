@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+    $('.jump').click(function(){
+        var jump = $(this).attr('href');
+        var p = $('#'+jump).offset();
+        window.scrollTo(p.left,p.top);
+        return false;
+    });
+    });
+    </script>
+</head>
+<body>
+<a class="jump" id="top" href="bottom">jump</a>
+<div style="width:100%;display:block;">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+
+<div style="width:100%;display:block;">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+<a class="jump" id="bottom" href="top">jump</a>
+</body>
+</html>

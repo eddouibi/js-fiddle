@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script>
+function repos(user,items, page) 
+{
+items = items || [];
+page = page || 1;
+
+var uri = "https://api.github.com/users/"+user+"/repos?callback=?"
+        + "&per_page=100"
+        + "&page="+page;
+$.getJSON(uri, function (result) {
+  if (result.data && result.data.length > 0) {
+    items = items.concat(result.data);
+    repos(user,items, page + 1);
+  }
+});
+alert(items);
+return items;
+}
+ 
+var items=repos("cancerhermit");
+$.each(items, function (i, repo) {
+    alert(i);
+    $('.box').append(repo.description);
+});
+</script>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+</html>

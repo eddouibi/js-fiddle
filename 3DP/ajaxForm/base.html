@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+<script> 
+        $(document).ready(function() { 
+            $('form').ajaxForm(function() { 
+                alert("submit"); 
+            }); 
+        }); 
+    </script> 
+</head>
+<body>
+
+    <form id="form" name="name" action="result.html" method="post">
+        <input type="text" name="value" />
+        <input type="submit" />
+    </form>
+
+</body>
+</html>

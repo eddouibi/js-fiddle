@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-latest.min.js
+"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column'
+            },
+            title: {
+                text: 'title'
+            },
+                series: [{
+                data: [1,2,3]
+            }]
+        });
+    });
+});
+$(function () {
+    $(document).ready(function() {
+        var chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container2',
+                type: 'column'
+            },
+            title: {
+                text: 'title floating',
+                floating:true
+            },
+                series: [{
+                data: [1,2,3]
+            }]
+        });
+    });
+});
+</script>
+<style>
+div {
+    width:300px;
+    height:200px;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><div id="container"></div></td>
+            <td><div id="container2"></div></td>
+        </tr>
+    </table>
+</body>
+</html>
